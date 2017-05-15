@@ -3,4 +3,24 @@
     <string name="generate_activity_button">Generate activity</string>
     <string name="back_button">Back</string>
     <string name="text_editor">Your Text Here</string>
+    <string name="title">Fun in the sun</string>
+    <string name="description">Lorem ipsum color aut arnet, consectetur adipiscing eit, sed do elusmod tempor incididunt ut labore et dollor magna aliqua</string>
+
+
+    <string name="text_main">Adaugare student</string>
+    <string name="name_hint">Nume</string>
+    <string name="prenume_hint">Prenume</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_number_hint">Numar telefon</string>
+    <string name="universitate_bucuresti">Universitate Bucuresti</string>
+    <string name="politehnica">Politehnica</string>
+    <string name="universitate_pitesti">Universitatea din Pitesti</string>
+    <string name="universitate">Universitate</string>
+    <string name="cunostinte">Cunostinte</string>
+    <string name="object_oriented">OOP</string>
+    <string name="C_and_C_plus_plus">C/C++</string>
+    <string name="JAVA">JAVA</string>
+    <string name="C_sharp">C#</string>
+    <string name="apply_question">Doresti sa aplici pentru stagiu de Android?</string>
+    <string name="save_button">Salveaza</string>
 </resources>
