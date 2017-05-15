@@ -23,4 +23,5 @@
     <string name="C_sharp">C#</string>
     <string name="apply_question">Doresti sa aplici pentru stagiu de Android?</string>
     <string name="save_button">Salveaza</string>
+    <string name="adaugare_student">Adaugare student</string>
 </resources>
