@@ -7,10 +7,25 @@
     tools:context="com.android.roweb.internship.firstapp.Activity2">
 
     <TextView
+        android:id="@+id/text_view"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:onClick="goBackButton"
+        android:text="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 </android.support.constraint.ConstraintLayout>

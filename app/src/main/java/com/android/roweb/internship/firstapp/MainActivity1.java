@@ -5,22 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-public class Activity2 extends AppCompatActivity {
+public class MainActivity1 extends AppCompatActivity {
 
-    private String TAG = Activity2.class.getSimpleName();
+    private String TAG = MainActivity1.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("AWESOME_TAG", "onCreate method was invoked");
-        setContentView(R.layout.activity_2);
-        setText();
+        setContentView(R.layout.activity_main_1);
+        Log.e(TAG, "onCreate method was invoked");
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -57,27 +53,19 @@ public class Activity2 extends AppCompatActivity {
         Log.e(TAG, "onDestroy method was invoked");
     }
 
-    private String getTextFromActivity(){
-        Log.e(TAG, "getTextFromActivity method was invoked");
-        Bundle extras = getIntent().getExtras();
-        String text = "";
-        if (extras!= null){
-            text = extras.getString("Name");
-        }
-        return text;
+    // Metoda ce preia textul introdus in EditTextView
+    private String getTextFromET(){
+        Log.e(TAG, " getTextFromET method was invoked");
+        EditText yourText = (EditText) findViewById(R.id.edit_text_view);
+        return yourText.getText().toString();
     }
 
-    private void setText(){
-        TextView textView = (TextView) findViewById(R.id.text_view);
-        textView.setText(getTextFromActivity());
-        Log.e(TAG, "setText method was invoked");
-    }
-
-    // Metoda ce face posibila trecerea inapoi la Main Activity
-    // si e sincronizata cu butonul BACK
-    public void goBackButton(View view){
-        Intent intent = new Intent(Activity2.this, MainActivity1.class);
+    // Metoda ce preia textul returnat de metoda getTextFromET si creeaza o noua activitate
+    // si e sincronizata cu butonul GENERATE VIEW
+    public void generateActivity(View view){
+        Intent intent = new Intent(MainActivity1.this, Activity2.class);
+        intent.putExtra("Name", getTextFromET());
         startActivity(intent);
-        Log.e(TAG, "goBackButton method was invoked");
+        Log.e(TAG, "generateActivity method was invoked");
     }
 }
